@@ -1,0 +1,128 @@
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options. 
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{2979ff}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Lyam Milbury}
+\tagline{COMPUTER ENGINEERING STUDENT | HARDWARE HACKER | TECH ENTHUSIAST}
+\title{Lyam Milbury's Resume}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \normalsize\email{lyammil@outlook.com}
+  \phone{+1 (613) 807-2307}
+%  \mailaddress{Address, Street, 00000 County}
+%  \location{Sunnyvale, CA}
+  \normalsize\github{Lyam-Milbury}
+  \normalsize\linkedin{Lyam-Milbury}
+%  \divider
+%  \divider
+}
+
+%% Make the header extend all the way to the right, if you want. Extend the right margin by 8cm (=6.8cm marginparwidth + 1.2cm marginparsep)
+\begin{adjustwidth}{}{-8cm}
+\makecvheader
+\end{adjustwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{experience}
+\cvproject
+	{Front End Developer}
+    {Government of Canada}
+    {May 2018 - May 2021}
+\begin{itemize}
+	\item {Developed and maintained webpages and tools for the Spectrum Telecommunication Services (STS) branch, working primarily on creating complex interactive google maps.}
+	\item {Harnessed geoJSON, KMLs, and JavaScript to lead an initiative to replace over five hundred outdated spectrum auction webpages into a handful of interactive maps, reducing database ROT and client frustration. Received Award of Merit from the Deputy Minister of the STS for this work.}
+	\item {Worked with a passionate team in a collaborative environment, focusing on teamwork in order to meet time-sensitive deadlines.}
+	\item {Utilized downtime to create a Java-based application for quick and simple generation of interactive google maps to reduce webpage turnaround time.}
+\end{itemize}
+
+\cvsection[]{projects}
+
+\cvproject
+	{Applying ML for TCP}
+    {Capstone Project}
+    {Fall 2021 - Winter 2022}
+\begin{itemize}
+	\item {Collaborated with a professor and two peers to conduct research, train, and evaluate different ranking models utilizing test case prioritization (TCP) in the context of continuous integration (CI).}
+	\item {Main responsibility was conducting research on different machine learning (ML) anomaly detection models, utilizing Python 3 and the Pyod toolkit to train/evaluate and optimize the selected models, and analyzing/visualizing their results.}
+	\item {Also took on the role of data analyst, performing feature selection on large data sets from open source projects.}
+\end{itemize}
+
+\divider
+
+\cvproject
+	{catJAM - Discord music bot}
+    {Personal Project}
+    {September 2021}
+\begin{itemize}
+	\item {Developed a bot that can play high-quality audio from web-based mp4 videos in voice calls via user requests by leveraging NodeJS.}
+	\item {Created with scalability and security in mind with multiple instances being active in different voice calls simultaneously.}
+	\item {Hosted on an Ubuntu AWS EC2 instance to ensure a near 100\% uptime.}
+\end{itemize}
+
+\divider
+
+\cvproject
+	{Autonomous Greenhouse}
+    {Course Project}
+    {Fall 2020}
+\begin{itemize}
+	\item {Designed and built a prototype of an autonomous greenhouse that maintained optimal humidity, brightness, soil moisture and air quality levels with a team of two peers.}
+	\item {Using Python 3, managed air quality control and ventilation. Converted sensor data into human-readable data, provided and managed an SQL database for sensor-to-sensor communication and designed/programmed a tkinter-based GUI for the database.}
+	\item {Followed a realistic development cycle, including a design phase using finite state machines, use case diagrams and class diagrams.}
+\end{itemize}
+
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
